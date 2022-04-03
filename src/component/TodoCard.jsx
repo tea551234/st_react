@@ -14,11 +14,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Todocount from './Todocount';
 
 // ========== image ==========
 
-const myImage = 'tea'
+const myImage = 'demo'
 let NewImage = require('./image/' + myImage + '.jpg');
 
 // ========== image ==========
@@ -43,7 +42,7 @@ export default function RecipeReviewCard() {
     };
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card>
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -60,8 +59,8 @@ export default function RecipeReviewCard() {
             />
             <CardMedia
                 component="img"
-                height="194"
                 image={NewImage}
+                max={'150'} 
                 alt="Paella dish"
             />
             <CardContent>
@@ -79,7 +78,7 @@ export default function RecipeReviewCard() {
                 <IconButton aria-label="share">
                     <ShareIcon />
                 </IconButton>
-                <Todocount/>
+                {/* <Todocount/> */}
 
                 <ExpandMore
                     expand={expanded}
